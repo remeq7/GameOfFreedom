@@ -21,5 +21,10 @@ namespace Game_Freedom
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
