@@ -43,6 +43,7 @@
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.a29 = new System.Windows.Forms.Button();
             this.a28 = new System.Windows.Forms.Button();
             this.a27 = new System.Windows.Forms.Button();
@@ -133,7 +134,6 @@
             this.a12 = new System.Windows.Forms.Button();
             this.a11 = new System.Windows.Forms.Button();
             this.a10 = new System.Windows.Forms.Button();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,7 +144,9 @@
             this.a00.Size = new System.Drawing.Size(30, 30);
             this.a00.TabIndex = 0;
             this.a00.UseVisualStyleBackColor = true;
-            this.a00.Click += new System.EventHandler(this.button1_Click);
+            this.a00.Click += new System.EventHandler(this.button_click);
+            this.a00.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a00.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a01
             // 
@@ -153,6 +155,9 @@
             this.a01.Size = new System.Drawing.Size(30, 30);
             this.a01.TabIndex = 1;
             this.a01.UseVisualStyleBackColor = true;
+            this.a01.Click += new System.EventHandler(this.button_click);
+            this.a01.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a01.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a02
             // 
@@ -161,6 +166,9 @@
             this.a02.Size = new System.Drawing.Size(30, 30);
             this.a02.TabIndex = 2;
             this.a02.UseVisualStyleBackColor = true;
+            this.a02.Click += new System.EventHandler(this.button_click);
+            this.a02.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a02.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a03
             // 
@@ -169,6 +177,9 @@
             this.a03.Size = new System.Drawing.Size(30, 30);
             this.a03.TabIndex = 3;
             this.a03.UseVisualStyleBackColor = true;
+            this.a03.Click += new System.EventHandler(this.button_click);
+            this.a03.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a03.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a04
             // 
@@ -177,6 +188,9 @@
             this.a04.Size = new System.Drawing.Size(30, 30);
             this.a04.TabIndex = 4;
             this.a04.UseVisualStyleBackColor = true;
+            this.a04.Click += new System.EventHandler(this.button_click);
+            this.a04.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a04.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a05
             // 
@@ -185,6 +199,9 @@
             this.a05.Size = new System.Drawing.Size(30, 30);
             this.a05.TabIndex = 5;
             this.a05.UseVisualStyleBackColor = true;
+            this.a05.Click += new System.EventHandler(this.button_click);
+            this.a05.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a05.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a06
             // 
@@ -193,6 +210,9 @@
             this.a06.Size = new System.Drawing.Size(30, 30);
             this.a06.TabIndex = 6;
             this.a06.UseVisualStyleBackColor = true;
+            this.a06.Click += new System.EventHandler(this.button_click);
+            this.a06.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a06.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a07
             // 
@@ -201,6 +221,9 @@
             this.a07.Size = new System.Drawing.Size(30, 30);
             this.a07.TabIndex = 7;
             this.a07.UseVisualStyleBackColor = true;
+            this.a07.Click += new System.EventHandler(this.button_click);
+            this.a07.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a07.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a08
             // 
@@ -209,6 +232,9 @@
             this.a08.Size = new System.Drawing.Size(30, 30);
             this.a08.TabIndex = 8;
             this.a08.UseVisualStyleBackColor = true;
+            this.a08.Click += new System.EventHandler(this.button_click);
+            this.a08.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a08.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a09
             // 
@@ -217,6 +243,9 @@
             this.a09.Size = new System.Drawing.Size(30, 30);
             this.a09.TabIndex = 9;
             this.a09.UseVisualStyleBackColor = true;
+            this.a09.Click += new System.EventHandler(this.button_click);
+            this.a09.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a09.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // menuStrip1
             // 
@@ -241,13 +270,13 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -259,6 +288,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // a29
             // 
             this.a29.Location = new System.Drawing.Point(336, 116);
@@ -266,6 +302,9 @@
             this.a29.Size = new System.Drawing.Size(30, 30);
             this.a29.TabIndex = 120;
             this.a29.UseVisualStyleBackColor = true;
+            this.a29.Click += new System.EventHandler(this.button_click);
+            this.a29.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a29.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a28
             // 
@@ -274,6 +313,9 @@
             this.a28.Size = new System.Drawing.Size(30, 30);
             this.a28.TabIndex = 119;
             this.a28.UseVisualStyleBackColor = true;
+            this.a28.Click += new System.EventHandler(this.button_click);
+            this.a28.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a28.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a27
             // 
@@ -282,6 +324,9 @@
             this.a27.Size = new System.Drawing.Size(30, 30);
             this.a27.TabIndex = 118;
             this.a27.UseVisualStyleBackColor = true;
+            this.a27.Click += new System.EventHandler(this.button_click);
+            this.a27.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a27.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a26
             // 
@@ -290,6 +335,9 @@
             this.a26.Size = new System.Drawing.Size(30, 30);
             this.a26.TabIndex = 117;
             this.a26.UseVisualStyleBackColor = true;
+            this.a26.Click += new System.EventHandler(this.button_click);
+            this.a26.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a26.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a25
             // 
@@ -298,6 +346,9 @@
             this.a25.Size = new System.Drawing.Size(30, 30);
             this.a25.TabIndex = 116;
             this.a25.UseVisualStyleBackColor = true;
+            this.a25.Click += new System.EventHandler(this.button_click);
+            this.a25.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a25.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a24
             // 
@@ -306,6 +357,9 @@
             this.a24.Size = new System.Drawing.Size(30, 30);
             this.a24.TabIndex = 115;
             this.a24.UseVisualStyleBackColor = true;
+            this.a24.Click += new System.EventHandler(this.button_click);
+            this.a24.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a24.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a23
             // 
@@ -314,6 +368,9 @@
             this.a23.Size = new System.Drawing.Size(30, 30);
             this.a23.TabIndex = 114;
             this.a23.UseVisualStyleBackColor = true;
+            this.a23.Click += new System.EventHandler(this.button_click);
+            this.a23.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a23.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a22
             // 
@@ -322,6 +379,9 @@
             this.a22.Size = new System.Drawing.Size(30, 30);
             this.a22.TabIndex = 113;
             this.a22.UseVisualStyleBackColor = true;
+            this.a22.Click += new System.EventHandler(this.button_click);
+            this.a22.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a22.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a21
             // 
@@ -330,6 +390,9 @@
             this.a21.Size = new System.Drawing.Size(30, 30);
             this.a21.TabIndex = 112;
             this.a21.UseVisualStyleBackColor = true;
+            this.a21.Click += new System.EventHandler(this.button_click);
+            this.a21.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a21.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a20
             // 
@@ -338,6 +401,9 @@
             this.a20.Size = new System.Drawing.Size(30, 30);
             this.a20.TabIndex = 111;
             this.a20.UseVisualStyleBackColor = true;
+            this.a20.Click += new System.EventHandler(this.button_click);
+            this.a20.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a20.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a39
             // 
@@ -346,6 +412,9 @@
             this.a39.Size = new System.Drawing.Size(30, 30);
             this.a39.TabIndex = 130;
             this.a39.UseVisualStyleBackColor = true;
+            this.a39.Click += new System.EventHandler(this.button_click);
+            this.a39.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a39.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a38
             // 
@@ -354,6 +423,9 @@
             this.a38.Size = new System.Drawing.Size(30, 30);
             this.a38.TabIndex = 129;
             this.a38.UseVisualStyleBackColor = true;
+            this.a38.Click += new System.EventHandler(this.button_click);
+            this.a38.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a38.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a37
             // 
@@ -362,6 +434,9 @@
             this.a37.Size = new System.Drawing.Size(30, 30);
             this.a37.TabIndex = 128;
             this.a37.UseVisualStyleBackColor = true;
+            this.a37.Click += new System.EventHandler(this.button_click);
+            this.a37.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a37.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a36
             // 
@@ -370,6 +445,9 @@
             this.a36.Size = new System.Drawing.Size(30, 30);
             this.a36.TabIndex = 127;
             this.a36.UseVisualStyleBackColor = true;
+            this.a36.Click += new System.EventHandler(this.button_click);
+            this.a36.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a36.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a35
             // 
@@ -378,6 +456,9 @@
             this.a35.Size = new System.Drawing.Size(30, 30);
             this.a35.TabIndex = 126;
             this.a35.UseVisualStyleBackColor = true;
+            this.a35.Click += new System.EventHandler(this.button_click);
+            this.a35.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a35.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a34
             // 
@@ -386,6 +467,9 @@
             this.a34.Size = new System.Drawing.Size(30, 30);
             this.a34.TabIndex = 125;
             this.a34.UseVisualStyleBackColor = true;
+            this.a34.Click += new System.EventHandler(this.button_click);
+            this.a34.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a34.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a33
             // 
@@ -394,6 +478,9 @@
             this.a33.Size = new System.Drawing.Size(30, 30);
             this.a33.TabIndex = 124;
             this.a33.UseVisualStyleBackColor = true;
+            this.a33.Click += new System.EventHandler(this.button_click);
+            this.a33.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a33.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a32
             // 
@@ -402,6 +489,9 @@
             this.a32.Size = new System.Drawing.Size(30, 30);
             this.a32.TabIndex = 123;
             this.a32.UseVisualStyleBackColor = true;
+            this.a32.Click += new System.EventHandler(this.button_click);
+            this.a32.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a32.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a31
             // 
@@ -410,6 +500,9 @@
             this.a31.Size = new System.Drawing.Size(30, 30);
             this.a31.TabIndex = 122;
             this.a31.UseVisualStyleBackColor = true;
+            this.a31.Click += new System.EventHandler(this.button_click);
+            this.a31.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a31.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a30
             // 
@@ -418,6 +511,9 @@
             this.a30.Size = new System.Drawing.Size(30, 30);
             this.a30.TabIndex = 121;
             this.a30.UseVisualStyleBackColor = true;
+            this.a30.Click += new System.EventHandler(this.button_click);
+            this.a30.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a30.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a49
             // 
@@ -426,6 +522,9 @@
             this.a49.Size = new System.Drawing.Size(30, 30);
             this.a49.TabIndex = 140;
             this.a49.UseVisualStyleBackColor = true;
+            this.a49.Click += new System.EventHandler(this.button_click);
+            this.a49.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a49.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a48
             // 
@@ -434,6 +533,9 @@
             this.a48.Size = new System.Drawing.Size(30, 30);
             this.a48.TabIndex = 139;
             this.a48.UseVisualStyleBackColor = true;
+            this.a48.Click += new System.EventHandler(this.button_click);
+            this.a48.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a48.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a47
             // 
@@ -442,6 +544,9 @@
             this.a47.Size = new System.Drawing.Size(30, 30);
             this.a47.TabIndex = 138;
             this.a47.UseVisualStyleBackColor = true;
+            this.a47.Click += new System.EventHandler(this.button_click);
+            this.a47.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a47.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a46
             // 
@@ -450,6 +555,9 @@
             this.a46.Size = new System.Drawing.Size(30, 30);
             this.a46.TabIndex = 137;
             this.a46.UseVisualStyleBackColor = true;
+            this.a46.Click += new System.EventHandler(this.button_click);
+            this.a46.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a46.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a45
             // 
@@ -458,6 +566,9 @@
             this.a45.Size = new System.Drawing.Size(30, 30);
             this.a45.TabIndex = 136;
             this.a45.UseVisualStyleBackColor = true;
+            this.a45.Click += new System.EventHandler(this.button_click);
+            this.a45.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a45.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a44
             // 
@@ -466,6 +577,9 @@
             this.a44.Size = new System.Drawing.Size(30, 30);
             this.a44.TabIndex = 135;
             this.a44.UseVisualStyleBackColor = true;
+            this.a44.Click += new System.EventHandler(this.button_click);
+            this.a44.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a44.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a43
             // 
@@ -474,6 +588,9 @@
             this.a43.Size = new System.Drawing.Size(30, 30);
             this.a43.TabIndex = 134;
             this.a43.UseVisualStyleBackColor = true;
+            this.a43.Click += new System.EventHandler(this.button_click);
+            this.a43.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a43.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a42
             // 
@@ -482,6 +599,9 @@
             this.a42.Size = new System.Drawing.Size(30, 30);
             this.a42.TabIndex = 133;
             this.a42.UseVisualStyleBackColor = true;
+            this.a42.Click += new System.EventHandler(this.button_click);
+            this.a42.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a42.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a41
             // 
@@ -490,6 +610,9 @@
             this.a41.Size = new System.Drawing.Size(30, 30);
             this.a41.TabIndex = 132;
             this.a41.UseVisualStyleBackColor = true;
+            this.a41.Click += new System.EventHandler(this.button_click);
+            this.a41.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a41.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a40
             // 
@@ -498,6 +621,9 @@
             this.a40.Size = new System.Drawing.Size(30, 30);
             this.a40.TabIndex = 131;
             this.a40.UseVisualStyleBackColor = true;
+            this.a40.Click += new System.EventHandler(this.button_click);
+            this.a40.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a40.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a59
             // 
@@ -506,6 +632,9 @@
             this.a59.Size = new System.Drawing.Size(30, 30);
             this.a59.TabIndex = 150;
             this.a59.UseVisualStyleBackColor = true;
+            this.a59.Click += new System.EventHandler(this.button_click);
+            this.a59.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a59.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a58
             // 
@@ -514,6 +643,9 @@
             this.a58.Size = new System.Drawing.Size(30, 30);
             this.a58.TabIndex = 149;
             this.a58.UseVisualStyleBackColor = true;
+            this.a58.Click += new System.EventHandler(this.button_click);
+            this.a58.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a58.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a57
             // 
@@ -522,6 +654,9 @@
             this.a57.Size = new System.Drawing.Size(30, 30);
             this.a57.TabIndex = 148;
             this.a57.UseVisualStyleBackColor = true;
+            this.a57.Click += new System.EventHandler(this.button_click);
+            this.a57.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a57.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a56
             // 
@@ -530,6 +665,9 @@
             this.a56.Size = new System.Drawing.Size(30, 30);
             this.a56.TabIndex = 147;
             this.a56.UseVisualStyleBackColor = true;
+            this.a56.Click += new System.EventHandler(this.button_click);
+            this.a56.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a56.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a55
             // 
@@ -538,6 +676,9 @@
             this.a55.Size = new System.Drawing.Size(30, 30);
             this.a55.TabIndex = 146;
             this.a55.UseVisualStyleBackColor = true;
+            this.a55.Click += new System.EventHandler(this.button_click);
+            this.a55.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a55.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a54
             // 
@@ -546,6 +687,9 @@
             this.a54.Size = new System.Drawing.Size(30, 30);
             this.a54.TabIndex = 145;
             this.a54.UseVisualStyleBackColor = true;
+            this.a54.Click += new System.EventHandler(this.button_click);
+            this.a54.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a54.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a53
             // 
@@ -554,6 +698,9 @@
             this.a53.Size = new System.Drawing.Size(30, 30);
             this.a53.TabIndex = 144;
             this.a53.UseVisualStyleBackColor = true;
+            this.a53.Click += new System.EventHandler(this.button_click);
+            this.a53.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a53.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a52
             // 
@@ -562,6 +709,9 @@
             this.a52.Size = new System.Drawing.Size(30, 30);
             this.a52.TabIndex = 143;
             this.a52.UseVisualStyleBackColor = true;
+            this.a52.Click += new System.EventHandler(this.button_click);
+            this.a52.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a52.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a51
             // 
@@ -570,6 +720,9 @@
             this.a51.Size = new System.Drawing.Size(30, 30);
             this.a51.TabIndex = 142;
             this.a51.UseVisualStyleBackColor = true;
+            this.a51.Click += new System.EventHandler(this.button_click);
+            this.a51.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a51.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a50
             // 
@@ -578,6 +731,9 @@
             this.a50.Size = new System.Drawing.Size(30, 30);
             this.a50.TabIndex = 141;
             this.a50.UseVisualStyleBackColor = true;
+            this.a50.Click += new System.EventHandler(this.button_click);
+            this.a50.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a50.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a69
             // 
@@ -586,6 +742,9 @@
             this.a69.Size = new System.Drawing.Size(30, 30);
             this.a69.TabIndex = 160;
             this.a69.UseVisualStyleBackColor = true;
+            this.a69.Click += new System.EventHandler(this.button_click);
+            this.a69.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a69.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a68
             // 
@@ -594,6 +753,9 @@
             this.a68.Size = new System.Drawing.Size(30, 30);
             this.a68.TabIndex = 159;
             this.a68.UseVisualStyleBackColor = true;
+            this.a68.Click += new System.EventHandler(this.button_click);
+            this.a68.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a68.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a67
             // 
@@ -602,6 +764,9 @@
             this.a67.Size = new System.Drawing.Size(30, 30);
             this.a67.TabIndex = 158;
             this.a67.UseVisualStyleBackColor = true;
+            this.a67.Click += new System.EventHandler(this.button_click);
+            this.a67.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a67.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a66
             // 
@@ -610,6 +775,9 @@
             this.a66.Size = new System.Drawing.Size(30, 30);
             this.a66.TabIndex = 157;
             this.a66.UseVisualStyleBackColor = true;
+            this.a66.Click += new System.EventHandler(this.button_click);
+            this.a66.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a66.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a65
             // 
@@ -618,6 +786,9 @@
             this.a65.Size = new System.Drawing.Size(30, 30);
             this.a65.TabIndex = 156;
             this.a65.UseVisualStyleBackColor = true;
+            this.a65.Click += new System.EventHandler(this.button_click);
+            this.a65.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a65.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a64
             // 
@@ -626,6 +797,9 @@
             this.a64.Size = new System.Drawing.Size(30, 30);
             this.a64.TabIndex = 155;
             this.a64.UseVisualStyleBackColor = true;
+            this.a64.Click += new System.EventHandler(this.button_click);
+            this.a64.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a64.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a63
             // 
@@ -634,6 +808,9 @@
             this.a63.Size = new System.Drawing.Size(30, 30);
             this.a63.TabIndex = 154;
             this.a63.UseVisualStyleBackColor = true;
+            this.a63.Click += new System.EventHandler(this.button_click);
+            this.a63.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a63.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a62
             // 
@@ -642,6 +819,9 @@
             this.a62.Size = new System.Drawing.Size(30, 30);
             this.a62.TabIndex = 153;
             this.a62.UseVisualStyleBackColor = true;
+            this.a62.Click += new System.EventHandler(this.button_click);
+            this.a62.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a62.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a61
             // 
@@ -650,6 +830,9 @@
             this.a61.Size = new System.Drawing.Size(30, 30);
             this.a61.TabIndex = 152;
             this.a61.UseVisualStyleBackColor = true;
+            this.a61.Click += new System.EventHandler(this.button_click);
+            this.a61.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a61.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a60
             // 
@@ -658,6 +841,9 @@
             this.a60.Size = new System.Drawing.Size(30, 30);
             this.a60.TabIndex = 151;
             this.a60.UseVisualStyleBackColor = true;
+            this.a60.Click += new System.EventHandler(this.button_click);
+            this.a60.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a60.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a79
             // 
@@ -666,6 +852,9 @@
             this.a79.Size = new System.Drawing.Size(30, 30);
             this.a79.TabIndex = 170;
             this.a79.UseVisualStyleBackColor = true;
+            this.a79.Click += new System.EventHandler(this.button_click);
+            this.a79.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a79.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a78
             // 
@@ -674,6 +863,9 @@
             this.a78.Size = new System.Drawing.Size(30, 30);
             this.a78.TabIndex = 169;
             this.a78.UseVisualStyleBackColor = true;
+            this.a78.Click += new System.EventHandler(this.button_click);
+            this.a78.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a78.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a77
             // 
@@ -682,6 +874,9 @@
             this.a77.Size = new System.Drawing.Size(30, 30);
             this.a77.TabIndex = 168;
             this.a77.UseVisualStyleBackColor = true;
+            this.a77.Click += new System.EventHandler(this.button_click);
+            this.a77.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a77.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a76
             // 
@@ -690,6 +885,9 @@
             this.a76.Size = new System.Drawing.Size(30, 30);
             this.a76.TabIndex = 167;
             this.a76.UseVisualStyleBackColor = true;
+            this.a76.Click += new System.EventHandler(this.button_click);
+            this.a76.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a76.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a75
             // 
@@ -698,6 +896,9 @@
             this.a75.Size = new System.Drawing.Size(30, 30);
             this.a75.TabIndex = 166;
             this.a75.UseVisualStyleBackColor = true;
+            this.a75.Click += new System.EventHandler(this.button_click);
+            this.a75.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a75.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a74
             // 
@@ -706,6 +907,9 @@
             this.a74.Size = new System.Drawing.Size(30, 30);
             this.a74.TabIndex = 165;
             this.a74.UseVisualStyleBackColor = true;
+            this.a74.Click += new System.EventHandler(this.button_click);
+            this.a74.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a74.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a73
             // 
@@ -714,6 +918,9 @@
             this.a73.Size = new System.Drawing.Size(30, 30);
             this.a73.TabIndex = 164;
             this.a73.UseVisualStyleBackColor = true;
+            this.a73.Click += new System.EventHandler(this.button_click);
+            this.a73.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a73.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a72
             // 
@@ -722,6 +929,9 @@
             this.a72.Size = new System.Drawing.Size(30, 30);
             this.a72.TabIndex = 163;
             this.a72.UseVisualStyleBackColor = true;
+            this.a72.Click += new System.EventHandler(this.button_click);
+            this.a72.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a72.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a71
             // 
@@ -730,6 +940,9 @@
             this.a71.Size = new System.Drawing.Size(30, 30);
             this.a71.TabIndex = 162;
             this.a71.UseVisualStyleBackColor = true;
+            this.a71.Click += new System.EventHandler(this.button_click);
+            this.a71.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a71.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a70
             // 
@@ -738,6 +951,9 @@
             this.a70.Size = new System.Drawing.Size(30, 30);
             this.a70.TabIndex = 161;
             this.a70.UseVisualStyleBackColor = true;
+            this.a70.Click += new System.EventHandler(this.button_click);
+            this.a70.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a70.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a89
             // 
@@ -746,6 +962,9 @@
             this.a89.Size = new System.Drawing.Size(30, 30);
             this.a89.TabIndex = 180;
             this.a89.UseVisualStyleBackColor = true;
+            this.a89.Click += new System.EventHandler(this.button_click);
+            this.a89.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a89.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a88
             // 
@@ -754,6 +973,9 @@
             this.a88.Size = new System.Drawing.Size(30, 30);
             this.a88.TabIndex = 179;
             this.a88.UseVisualStyleBackColor = true;
+            this.a88.Click += new System.EventHandler(this.button_click);
+            this.a88.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a88.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a87
             // 
@@ -762,6 +984,9 @@
             this.a87.Size = new System.Drawing.Size(30, 30);
             this.a87.TabIndex = 178;
             this.a87.UseVisualStyleBackColor = true;
+            this.a87.Click += new System.EventHandler(this.button_click);
+            this.a87.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a87.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a86
             // 
@@ -770,6 +995,9 @@
             this.a86.Size = new System.Drawing.Size(30, 30);
             this.a86.TabIndex = 177;
             this.a86.UseVisualStyleBackColor = true;
+            this.a86.Click += new System.EventHandler(this.button_click);
+            this.a86.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a86.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a85
             // 
@@ -778,6 +1006,9 @@
             this.a85.Size = new System.Drawing.Size(30, 30);
             this.a85.TabIndex = 176;
             this.a85.UseVisualStyleBackColor = true;
+            this.a85.Click += new System.EventHandler(this.button_click);
+            this.a85.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a85.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a84
             // 
@@ -786,6 +1017,9 @@
             this.a84.Size = new System.Drawing.Size(30, 30);
             this.a84.TabIndex = 175;
             this.a84.UseVisualStyleBackColor = true;
+            this.a84.Click += new System.EventHandler(this.button_click);
+            this.a84.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a84.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a83
             // 
@@ -794,6 +1028,9 @@
             this.a83.Size = new System.Drawing.Size(30, 30);
             this.a83.TabIndex = 174;
             this.a83.UseVisualStyleBackColor = true;
+            this.a83.Click += new System.EventHandler(this.button_click);
+            this.a83.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a83.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a82
             // 
@@ -802,6 +1039,9 @@
             this.a82.Size = new System.Drawing.Size(30, 30);
             this.a82.TabIndex = 173;
             this.a82.UseVisualStyleBackColor = true;
+            this.a82.Click += new System.EventHandler(this.button_click);
+            this.a82.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a82.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a81
             // 
@@ -810,6 +1050,9 @@
             this.a81.Size = new System.Drawing.Size(30, 30);
             this.a81.TabIndex = 172;
             this.a81.UseVisualStyleBackColor = true;
+            this.a81.Click += new System.EventHandler(this.button_click);
+            this.a81.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a81.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a80
             // 
@@ -818,6 +1061,9 @@
             this.a80.Size = new System.Drawing.Size(30, 30);
             this.a80.TabIndex = 171;
             this.a80.UseVisualStyleBackColor = true;
+            this.a80.Click += new System.EventHandler(this.button_click);
+            this.a80.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a80.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a99
             // 
@@ -826,6 +1072,9 @@
             this.a99.Size = new System.Drawing.Size(30, 30);
             this.a99.TabIndex = 190;
             this.a99.UseVisualStyleBackColor = true;
+            this.a99.Click += new System.EventHandler(this.button_click);
+            this.a99.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a99.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a98
             // 
@@ -834,6 +1083,9 @@
             this.a98.Size = new System.Drawing.Size(30, 30);
             this.a98.TabIndex = 189;
             this.a98.UseVisualStyleBackColor = true;
+            this.a98.Click += new System.EventHandler(this.button_click);
+            this.a98.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a98.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a97
             // 
@@ -842,6 +1094,9 @@
             this.a97.Size = new System.Drawing.Size(30, 30);
             this.a97.TabIndex = 188;
             this.a97.UseVisualStyleBackColor = true;
+            this.a97.Click += new System.EventHandler(this.button_click);
+            this.a97.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a97.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a96
             // 
@@ -850,6 +1105,9 @@
             this.a96.Size = new System.Drawing.Size(30, 30);
             this.a96.TabIndex = 187;
             this.a96.UseVisualStyleBackColor = true;
+            this.a96.Click += new System.EventHandler(this.button_click);
+            this.a96.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a96.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a95
             // 
@@ -858,6 +1116,9 @@
             this.a95.Size = new System.Drawing.Size(30, 30);
             this.a95.TabIndex = 186;
             this.a95.UseVisualStyleBackColor = true;
+            this.a95.Click += new System.EventHandler(this.button_click);
+            this.a95.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a95.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a94
             // 
@@ -866,6 +1127,9 @@
             this.a94.Size = new System.Drawing.Size(30, 30);
             this.a94.TabIndex = 185;
             this.a94.UseVisualStyleBackColor = true;
+            this.a94.Click += new System.EventHandler(this.button_click);
+            this.a94.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a94.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a93
             // 
@@ -874,6 +1138,9 @@
             this.a93.Size = new System.Drawing.Size(30, 30);
             this.a93.TabIndex = 184;
             this.a93.UseVisualStyleBackColor = true;
+            this.a93.Click += new System.EventHandler(this.button_click);
+            this.a93.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a93.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a92
             // 
@@ -882,6 +1149,9 @@
             this.a92.Size = new System.Drawing.Size(30, 30);
             this.a92.TabIndex = 183;
             this.a92.UseVisualStyleBackColor = true;
+            this.a92.Click += new System.EventHandler(this.button_click);
+            this.a92.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a92.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a91
             // 
@@ -890,6 +1160,9 @@
             this.a91.Size = new System.Drawing.Size(30, 30);
             this.a91.TabIndex = 182;
             this.a91.UseVisualStyleBackColor = true;
+            this.a91.Click += new System.EventHandler(this.button_click);
+            this.a91.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a91.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a90
             // 
@@ -898,6 +1171,9 @@
             this.a90.Size = new System.Drawing.Size(30, 30);
             this.a90.TabIndex = 181;
             this.a90.UseVisualStyleBackColor = true;
+            this.a90.Click += new System.EventHandler(this.button_click);
+            this.a90.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a90.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a19
             // 
@@ -906,6 +1182,9 @@
             this.a19.Size = new System.Drawing.Size(30, 30);
             this.a19.TabIndex = 200;
             this.a19.UseVisualStyleBackColor = true;
+            this.a19.Click += new System.EventHandler(this.button_click);
+            this.a19.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a19.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a18
             // 
@@ -914,6 +1193,9 @@
             this.a18.Size = new System.Drawing.Size(30, 30);
             this.a18.TabIndex = 199;
             this.a18.UseVisualStyleBackColor = true;
+            this.a18.Click += new System.EventHandler(this.button_click);
+            this.a18.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a18.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a17
             // 
@@ -922,6 +1204,9 @@
             this.a17.Size = new System.Drawing.Size(30, 30);
             this.a17.TabIndex = 198;
             this.a17.UseVisualStyleBackColor = true;
+            this.a17.Click += new System.EventHandler(this.button_click);
+            this.a17.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a17.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a16
             // 
@@ -930,7 +1215,9 @@
             this.a16.Size = new System.Drawing.Size(30, 30);
             this.a16.TabIndex = 197;
             this.a16.UseVisualStyleBackColor = true;
-            this.a16.Click += new System.EventHandler(this.button4_Click);
+            this.a16.Click += new System.EventHandler(this.button_click);
+            this.a16.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a16.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a15
             // 
@@ -939,6 +1226,9 @@
             this.a15.Size = new System.Drawing.Size(30, 30);
             this.a15.TabIndex = 196;
             this.a15.UseVisualStyleBackColor = true;
+            this.a15.Click += new System.EventHandler(this.button_click);
+            this.a15.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a15.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a14
             // 
@@ -947,6 +1237,9 @@
             this.a14.Size = new System.Drawing.Size(30, 30);
             this.a14.TabIndex = 195;
             this.a14.UseVisualStyleBackColor = true;
+            this.a14.Click += new System.EventHandler(this.button_click);
+            this.a14.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a14.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a13
             // 
@@ -955,6 +1248,9 @@
             this.a13.Size = new System.Drawing.Size(30, 30);
             this.a13.TabIndex = 194;
             this.a13.UseVisualStyleBackColor = true;
+            this.a13.Click += new System.EventHandler(this.button_click);
+            this.a13.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a13.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a12
             // 
@@ -963,6 +1259,9 @@
             this.a12.Size = new System.Drawing.Size(30, 30);
             this.a12.TabIndex = 193;
             this.a12.UseVisualStyleBackColor = true;
+            this.a12.Click += new System.EventHandler(this.button_click);
+            this.a12.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a12.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a11
             // 
@@ -971,6 +1270,9 @@
             this.a11.Size = new System.Drawing.Size(30, 30);
             this.a11.TabIndex = 192;
             this.a11.UseVisualStyleBackColor = true;
+            this.a11.Click += new System.EventHandler(this.button_click);
+            this.a11.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a11.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // a10
             // 
@@ -979,12 +1281,9 @@
             this.a10.Size = new System.Drawing.Size(30, 30);
             this.a10.TabIndex = 191;
             this.a10.UseVisualStyleBackColor = true;
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.a10.Click += new System.EventHandler(this.button_click);
+            this.a10.MouseEnter += new System.EventHandler(this.button_enter);
+            this.a10.MouseLeave += new System.EventHandler(this.button_leave);
             // 
             // Form1
             // 
