@@ -134,6 +134,7 @@
             this.a12 = new System.Windows.Forms.Button();
             this.a11 = new System.Windows.Forms.Button();
             this.a10 = new System.Windows.Forms.Button();
+            this.wyswietlTabliceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -270,8 +271,9 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -283,7 +285,8 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.wyswietlTabliceToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -291,7 +294,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -1285,6 +1288,13 @@
             this.a10.MouseEnter += new System.EventHandler(this.button_enter);
             this.a10.MouseLeave += new System.EventHandler(this.button_leave);
             // 
+            // wyswietlTabliceToolStripMenuItem
+            // 
+            this.wyswietlTabliceToolStripMenuItem.Name = "wyswietlTabliceToolStripMenuItem";
+            this.wyswietlTabliceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wyswietlTabliceToolStripMenuItem.Text = "Wyswietl tablice";
+            this.wyswietlTabliceToolStripMenuItem.Click += new System.EventHandler(this.wyswietlTabliceToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1510,6 +1520,7 @@
         private System.Windows.Forms.Button a11;
         private System.Windows.Forms.Button a10;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wyswietlTabliceToolStripMenuItem;
     }
 }
 

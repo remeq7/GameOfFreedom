@@ -22,6 +22,7 @@ namespace Game_Freedom
         static int height = 10;
 
         int[,] array = new int[width, height];
+
         public Form1()
         {
             InitializeComponent();
@@ -133,6 +134,46 @@ namespace Game_Freedom
                 b.Text = "";
             }
 
+        }
+
+        private void wyswietlTabliceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.Clear();
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            turn_count = 0;
+
+            try
+            {
+                foreach (Control c in Controls)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = true;
+                    b.Text = "";
+                }
+
+            }
+            catch { }
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    array[i, j] = 0;
+                }
+
+            }
+            Console.Clear();
         }
     }
 }
