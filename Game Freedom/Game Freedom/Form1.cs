@@ -15,6 +15,7 @@ namespace Game_Freedom
 
         //X to jest 1
         //Y to jest 2
+        //taktyczny komentarz dla aktualizacji
 
         bool turn = true; //true = X turn, false = O turn
         int turn_count = 0;
