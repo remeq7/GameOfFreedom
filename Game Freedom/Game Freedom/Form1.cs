@@ -22,6 +22,7 @@ namespace Game_Freedom
         static int ROW = 10;
         static int COL = 10;
 
+
         char[,] polegry = new char[ROW, COL];
         //char[][] polegry = new char[ROW][COL];
 
@@ -191,17 +192,24 @@ namespace Game_Freedom
             turn = true;
             turn_count = 0;
 
-            try
-            {
+
+            X_point_count.Text = "0"; 
+            Y_point_count.Text = "0";
+
+
                 foreach (Control c in Controls)
                 {
-                    Button b = (Button)c;
-                    b.Enabled = true;
-                    b.Text = "";
+                    try
+                    {
+                        Button b = (Button)c;
+                        b.Enabled = true;
+                        b.Text = "";
+                    }
+                catch { }
                 }
 
-            }
-            catch { }
+            
+            
             for (int i = 0; i < ROW; i++)
             {
                 for (int j = 0; j < COL; j++)
@@ -210,6 +218,8 @@ namespace Game_Freedom
                 }
 
             }
+
+
             Console.Clear();
         }
 
