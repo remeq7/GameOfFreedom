@@ -19,10 +19,11 @@ namespace Game_Freedom
 
         bool turn = true; //true = X turn, false = O turn
         int turn_count = 0;
-        static int width = 10;
-        static int height = 10;
+        static int ROW = 10;
+        static int COL = 10;
 
-        int[,] array = new int[width, height];
+        char[,] polegry = new char[ROW, COL];
+        //char[][] polegry = new char[ROW][COL];
 
         public Form1()
         {
@@ -66,7 +67,7 @@ namespace Game_Freedom
             {
                 if (b.Enabled == false)
                 {
-                    array[i, j] = 1;
+                    polegry[i, j] = '1';
                 }
             }
 
@@ -74,11 +75,46 @@ namespace Game_Freedom
             {
                 if (b.Enabled == false)
                 {
-                    array[i, j] = 2;
+                    polegry[i, j] = '2';
                 }
             }
 
-            check_winning(i, j);
+            Console.WriteLine("Punkty bialych:" + policzbiale(polegry));
+            Console.WriteLine("Punkty czarnych:" + policzczarne(polegry));
+            int XPoint = policzbiale(polegry);
+            int YPoint = policzczarne(polegry);
+
+            X_point_count.Text = XPoint.ToString();
+            Y_point_count.Text = YPoint.ToString();
+
+
+
+
+            //check_winning(i, j);
+
+            //policzbiale(polegry);
+
+
+            /*char[][] polegry1 = new char[10][];
+            for (int z = 0; z < 10; z++)
+            {
+                polegry1[z] = new char[10];
+
+            }
+            for (int z = 0; z < 10; z++)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    polegry1[z][k] = '0';
+
+                }
+
+            }
+            polegry1[0] = "0011110000".ToCharArray();
+            wypisz(polegry1);
+            Console.WriteLine("Punkty bialych:" + policzbiale(polegry1));*/
+
+
 
         }
 
@@ -86,9 +122,9 @@ namespace Game_Freedom
         {
             if (j < 8)
             {
-                if ((array[i, j] & array[i, j + 1]) == 1)
+                if ((polegry[i, j] & polegry[i, j + 1]) == '1')
                     MessageBox.Show("X wygrał", "zwyciestwo");
-                if ((array[i, j] & array[i, j + 1]) == 2)
+                if ((polegry[i, j] & polegry[i, j + 1]) == '2')
                     MessageBox.Show("O wygrał", "zwyciestwo");
             }
         }
@@ -140,11 +176,11 @@ namespace Game_Freedom
         private void wyswietlTabliceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.Clear();
-            for (int i = 0; i < width; i++)
+            for (int i = 0; i < ROW; i++)
             {
-                for (int j = 0; j < height; j++)
+                for (int j = 0; j < COL; j++)
                 {
-                    Console.Write(array[i, j] + " ");
+                    Console.Write(polegry[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -166,15 +202,226 @@ namespace Game_Freedom
 
             }
             catch { }
-            for (int i = 0; i < width; i++)
+            for (int i = 0; i < ROW; i++)
             {
-                for (int j = 0; j < height; j++)
+                for (int j = 0; j < COL; j++)
                 {
-                    array[i, j] = 0;
+                    polegry[i, j] = '0';
                 }
 
             }
             Console.Clear();
+        }
+
+        static int policzbiale(char[,] polegry)
+        {
+
+            int wynik = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                String napis = String.Empty;
+                for (int k = 0; k < 10; k++) napis += polegry[i,k];
+                if (napis.Contains("0011111111") ||
+                    napis.Contains("0111101111") ||
+                    napis.Contains("1111001111") ||
+                    napis.Contains("1111011110") ||
+                    napis.Contains("1111111100") ||
+                    napis.Contains("0111111110"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis.Contains("1111"))
+                {
+                    wynik++;
+                }
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                String napis2 = String.Empty;
+                for (int k = 0; k < 10; k++) napis2 += polegry[k,i];
+                if (napis2.Contains("0011111111") ||
+                    napis2.Contains("0111101111") ||
+                    napis2.Contains("1111001111") ||
+                    napis2.Contains("1111011110") ||
+                    napis2.Contains("1111111100") ||
+                    napis2.Contains("0111111110"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis2.Contains("1111"))
+                {
+                    wynik++;
+                }
+
+            }
+            for (int line = 1; line <= (ROW + COL - 1); line++)
+            {
+                String napis5 = String.Empty;
+                int start_col = Math.Max(0, line - ROW);
+                int count = Math.Min(line, Math.Min((COL - start_col), ROW));
+                for (int j = 0; j < count; j++) napis5 += polegry[Math.Min(ROW, line) - j - 1,start_col + j];
+                if (napis5.Contains("0011111111") ||
+                    napis5.Contains("0111101111") ||
+                    napis5.Contains("1111001111") ||
+                    napis5.Contains("1111011110") ||
+                    napis5.Contains("1111111100") ||
+                    napis5.Contains("0111111110"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis5.Contains("1111"))
+                {
+                    wynik++;
+                }
+            }
+            char[][] invpolegry = new char[10][];
+            for (int i = 0; i < 10; i++)
+            {
+                invpolegry[i] = new char[10];
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    invpolegry[i][j] = polegry[i,9 - j];
+                }
+
+            }
+            for (int line = 1; line <= (ROW + COL - 1); line++)
+            {
+                String napis6 = String.Empty;
+                int start_col = Math.Max(0, line - ROW);
+                int count = Math.Min(line, Math.Min((COL - start_col), ROW));
+                for (int j = 0; j < count; j++) napis6 += invpolegry[Math.Min(ROW, line) - j - 1][start_col + j];
+                if (napis6.Contains("0011111111") ||
+                     napis6.Contains("0111101111") ||
+                     napis6.Contains("1111001111") ||
+                     napis6.Contains("1111011110") ||
+                     napis6.Contains("1111111100") ||
+                     napis6.Contains("0111111110"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis6.Contains("1111"))
+                {
+                    wynik++;
+                }
+            }
+
+            return wynik;
+        }
+
+        static int policzczarne(char[,] polegry)
+        {
+            int wynik = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                String napis = String.Empty;
+                for (int k = 0; k < 10; k++) napis += polegry[i,k];
+                if (napis.Contains("0022222222") ||
+                   napis.Contains("0222202222") ||
+                   napis.Contains("2222002222") ||
+                   napis.Contains("2222022220") ||
+                   napis.Contains("2222222200") ||
+                   napis.Contains("0222222220"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis.Contains("2222"))
+                {
+                    wynik++;
+                }
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                String napis2 = String.Empty;
+                for (int k = 0; k < 10; k++) napis2 += polegry[k,i];
+                if (napis2.Contains("0022222222") ||
+                   napis2.Contains("0222202222") ||
+                   napis2.Contains("2222002222") ||
+                   napis2.Contains("2222022220") ||
+                   napis2.Contains("2222222200") ||
+                   napis2.Contains("0222222220"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis2.Contains("2222"))
+                {
+                    wynik++;
+                }
+
+            }
+            for (int line = 1; line <= (ROW + COL - 1); line++)
+            {
+                String napis5 = String.Empty;
+                int start_col = Math.Max(0, line - ROW);
+                int count = Math.Min(line, Math.Min((COL - start_col), ROW));
+                for (int j = 0; j < count; j++) napis5 += polegry[Math.Min(ROW, line) - j - 1,start_col + j];
+                if (napis5.Contains("0022222222") ||
+                   napis5.Contains("0222202222") ||
+                   napis5.Contains("2222002222") ||
+                   napis5.Contains("2222022220") ||
+                   napis5.Contains("2222222200") ||
+                   napis5.Contains("0222222220"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis5.Contains("2222"))
+                {
+                    wynik++;
+                }
+            }
+            char[][] invpolegry = new char[10][];
+            for (int i = 0; i < 10; i++)
+            {
+                invpolegry[i] = new char[10];
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    invpolegry[i][j] = polegry[i,9 - j];
+                }
+
+            }
+            for (int line = 1; line <= (ROW + COL - 1); line++)
+            {
+                String napis6 = String.Empty;
+                int start_col = Math.Max(0, line - ROW);
+                int count = Math.Min(line, Math.Min((COL - start_col), ROW));
+                for (int j = 0; j < count; j++) napis6 += invpolegry[Math.Min(ROW, line) - j - 1][start_col + j];
+                if (napis6.Contains("0022222222") ||
+                   napis6.Contains("0222202222") ||
+                   napis6.Contains("2222002222") ||
+                   napis6.Contains("2222022220") ||
+                   napis6.Contains("2222222200") ||
+                   napis6.Contains("0222222220"))
+                {
+                    wynik++;
+                    wynik++;
+                }
+                else if (napis6.Contains("2222"))
+                {
+                    wynik++;
+                }
+            }
+
+            return wynik;
+        }
+
+        static void wypisz(char[][] polegry)
+        {
+            for (int i = 0; i < ROW; i++)
+            {
+                Console.WriteLine(polegry[i]);
+            }
         }
     }
 }
