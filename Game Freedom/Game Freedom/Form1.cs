@@ -133,7 +133,7 @@ namespace Game_Freedom
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Equipment:\n" +
-                            "Board 10×10, 50 white and 50 black pieces(stones) of the same value.\n" +
+                            "Board 10×10, 50 white and 50 bl ack pieces(stones) of the same value.\n" +
 
                             "The goal of the game:\n" +
                             "To have more pieces, than your opponent, that live in a rows of 4(in all possible directions), at the end of the game.\n" +
